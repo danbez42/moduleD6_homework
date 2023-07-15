@@ -1,0 +1,11 @@
+{% extends 'flatpages/default.html' %}
+
+{% block myTitle %}
+НОВОСТИ
+{% endblock myTitle %}
+
+{% block myContent %}
+<h1>Все новости</h1>
+<!-- {{ flatpage.content }} -->
+{{ news }}
+{% endblock myContent %}
