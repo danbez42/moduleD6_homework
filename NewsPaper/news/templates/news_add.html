@@ -1,0 +1,14 @@
+{% extends 'default.html' %}
+
+{% block title %}
+    Добавить новость, статью
+{% endblock title %}
+
+{% block content %}
+    <h2>Добавить пост</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Добавить">
+        </form>
+{% endblock content %}

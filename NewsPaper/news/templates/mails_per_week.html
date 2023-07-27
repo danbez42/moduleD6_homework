@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+</head>
+<body>
+    <h2>Здравствуй, {{ username }}! Прислали Вам список статей за прошедшую неделю!</h2>
+    {% for post in posts %}
+        <a href="{{ link }}{{post.pk}}"><p><strong>{{ post.title }}</strong></p></a>
+        <p><em>{{ post.text|truncatechars:50 }}</em></p>
+        <hr>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block title %}
+<title>Warning!</title>
+{% endblock %}
+{% block css %}
+<script src="{% static '/news/js/news.js' %}"></script>
+{% endblock %}
+{% block content %}
+<h2>Уважаемый автор {{ username }}. Вы исчерпали лимит на создание постов! В день можно публиковать только 3!</h2>
+    <h5>Через несколько секунд Вас автоматически перенаправит обратно к списку новостей...</h5>
+{% endblock %}

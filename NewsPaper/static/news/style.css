@@ -1,0 +1,41 @@
+.conteiner{
+    grid-template-areas: 'sidebar content';
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-column-gap: 20px;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    text-align: center;
+    list-style-type: none;
+}
+
+.content{
+    grid-area: content;
+}
+
+ul{
+    display: contents;
+}
+
+#category_buttons{
+     width: 100%;
+    border-radius: 10px;
+    border-color: #6f94c6;
+}
+
+#category_buttons:hover{
+    scale: 110%;
+}
+
+.a_cat_filter{
+    text-decoration: none;
+}
+li{
+    margin-top: 10px;
+}
+
+#count_cat_news{
+    text-align: center;
+}

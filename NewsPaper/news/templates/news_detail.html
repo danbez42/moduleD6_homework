@@ -1,0 +1,18 @@
+{% extends 'default.html' %}
+{% load custom_filters %}
+
+{% block title %} Подробнее {% endblock title%}
+
+{% block content %}
+<h3>{{post.title|censor}}</h3>
+<h5>{{post.time_create|date:'d M Y h:m'}}</h5>
+{{post.text|censor}}
+<hr>
+Автор: <i>{{post.author.author}}</i>
+    <br>
+    {% if is_author %}
+        <a href="{% url 'post_edit' post.id %}">Редактировать</a>
+        <br>
+        <a href="{% url 'post_delete' post.id %}">Удалить пост</a>
+    {% endif %}
+{% endblock content %}
